@@ -1,15 +1,20 @@
 package it.polito.tdp.imdb.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Director {
 	Integer id;
 	String firstName;
 	String lastName;
+	List <Actor> attoriPartner;
 	
 	public Director(Integer id, String firstName, String lastName) {
 		super();
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
+		this.attoriPartner=new ArrayList<Actor>();
 	}
 
 	public Integer getId() {
@@ -34,6 +39,15 @@ public class Director {
 
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
+	}
+	
+
+	public List<Actor> getAttoriPartner() {
+		return attoriPartner;
+	}
+
+	public void setAttoriPartner(List<Actor> attoriPartner) {
+		this.attoriPartner = attoriPartner;
 	}
 
 	@Override
